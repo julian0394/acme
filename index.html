@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Libreria Flickity Slider -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Libreria Flickity Slider -->
+     <link rel="stylesheet" href="stylesSlide.css">
+    <!-- ESTILOS PROPIOS -->
+        <link rel="stylesheet" href="styles.css">
+    <title>The ACME Corporation</title>
+            <!-- Stilos iniciales del carousel -->
+            <style media="screen">
+                .carousel-cell {
+                  width: 100%;
+                }
+
+                /* cell number */ 
+                .carousel-cell:before {
+                  display: block;
+                }
+            </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="#">ACME</a>
+        <nav>
+            <ul class="lista">
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Clientes</a></li>
+            </ul> 
+        </nav>
+        <a class="nav-btn" href=""></a><button>Contacto</button></a>
+    </header>
+    
+    <div class="contenedor-portada">
+        <div class="imagen-portada">
+            <!-- Portada con la imágen -->
+        </div>
+    </div>
+    
+    <main>        
+        <div class="separador"></div>
+        <h1>La compañía de suplementos más grande y confiable del mundo</h1>
+        
+        <div class="separador"></div>
+
+        <section class="nosotros">
+            <h2>Acerca de nosotros</h2>
+            <p>Desde su fundación en 1916, <span class="acme">ACME</span> se ha presentado como la marca insignia de productos que destacan por su calidad y desafían las leyes de la física. Por más de 100 años hemos estado a la vanguardia de la tecnología manufacturando productos que nuestra competencia ni llegó a imaginar.</p>         
+        </section>  
+        
+        <div class="separador"></div>
+       
+        <section class="productos">
+            <h2>Nuestros productos más reconocidos</h2>
+            <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art1.png" width="600" height="500" alt="foto de producto">
+                </div>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art2.png" width="600" height="500" alt="foto de producto">
+                </div>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art3.png" width="600" height="500" alt="foto de producto">
+                </div>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art4.png" width="600" height="500" alt="foto de producto">
+                </div>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art5.png" width="600" height="500" alt="foto de producto">
+                </div>
+                <div class="carousel-cell">
+                  <img class="w3-image" src="img/art6.png" width="600" height="500" alt="foto de producto">
+                </div>
+            </div>
+            <div class="tienda">
+                <h3>Le interesa ver más productos? </h3>
+                <a href=""><h3>Visite nuestra tienda!</h3></a>
+            </div>
+        </section>
+
+        <div class="separador"></div>
+        
+        <section class="clientes">
+            <h2>Siempre en los recuerdos de nuestros clientes</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta">
+                    <img src="img/opinion1.png" class="img-cliente" alt="Foto de cliente">
+                    <h3>Coyote</h3>
+                    <p>Los contrato desde que tengo memoria. No se por qué sigo confiando en esta marca pedorra.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="img/opinion2.png" class="img-cliente" alt="Foto de cliente">
+                    <h3>Correcaminos</h3>
+                    <p>Nunca me han defraudado. Jamás. Siempre funcionan como es de esperarse.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="img/opinion3.png" class="img-cliente" alt="Foto de cliente">
+                    <h3>Pikachu</h3>
+                    <p>No se qué hago acá pero exijo pokebolas marca <span class="acme">ACME</span>. Asi podríamos escapar más seguido...</p>
+                </div>
+            </div>
+            <!-- Aca quiero 3 tarjetas de clientes con foto, nombre y testimonio cada una -->
+        </section>
+
+        <section class="contacto">
+            <!-- Aca quiero un formulario -->
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <div class="facebook">
+                <img src="#" alt="Logo Facebook">
+            </div>
+            <div class="twitter">
+                <img src="#" alt="Logo Twitter">
+            </div>
+            <div class="tienda">
+                <img src="#" alt="Logo Tienda">
+            </div>
+        </div>
+        <p>Copyright The ACME Corporation - Desarrollado por Shuli Pérez - 2021</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- Scripts Flickity Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>
