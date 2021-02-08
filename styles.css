@@ -9,7 +9,7 @@
         background-color: #fafafa;
     }
 
-    li, a, button {
+    li, a, button, .btn {
         font-family: Verdana, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 1rem;
@@ -22,7 +22,7 @@
         font-family: 'Ubuntu', sans-serif;
     }
 
-    p {
+    p, input, textarea {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1rem;
     }
@@ -79,7 +79,7 @@
             color: #ad2323;
         }
 
-    header button {
+    header button, .btn {
         padding: 9px 25px;
         background-color: #ffe5bd;
         color: #7e1a1a;
@@ -98,12 +98,14 @@
             -ms-transition: all 0.3sec ease 0s;
             -o-transition: all 0.3sec ease 0s;
     }
-        header button:hover {
+        header button:hover, 
+        .contacto .btn:hover {
             background-color: #7e1a1a;
             color: #fafafa;
             border: solid 2px #7e1a1a;
         }
-        header button:active {
+        header button:active, 
+        .contacto .btn:active {
             background-color: #ad2323;
         }
 
@@ -179,14 +181,14 @@
         box-shadow: 2px 2px 6px 1px #9595957e;
     }
 
-    .clientes h3 {
+    .tarjeta h3 {
         font-weight: bold;
         padding: 15px 0;
     }
 
     .clientes p {
         font-style: italic;
-        padding: 0 60px;
+        padding: 0 10%;
     }
 
     .contenedor-tarjetas {
@@ -206,11 +208,72 @@
         box-shadow: 2px 2px 6px 1px #9595957e;
 }
 
+/* Clientes */
 
+    .contacto input, 
+    .contacto textarea {
+        padding: 10px 20%;
+        margin: 5px auto;
+        text-align: center;
+        border: solid 1.5px gray;
+        border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        outline: none;
+    }
 
+   .contacto .btn {
+       padding: 9px 10%;
+   }
+    
+/* Clientes */
 
+    footer {
+        padding-top: 50px;
+        margin-top: 10px;
+        
+    }  
 
+    footer *,
+    footer {
+        background-color: #ad2323;
+    }
 
+    footer p {
+        text-align: center;
+    }
+
+    footer .links  {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer a, 
+    footer p {
+        color: white;
+    }
+   
+    footer a {
+        padding: 0px 30px;
+    }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    footer p {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-size: .8rem;
+    }
+    
+    footer p a {
+        font-size: .8rem;
+        font-style: italic;
+        padding: 0;
+    }
 
 
 
