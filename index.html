@@ -26,18 +26,23 @@
 </head>
 <body>
     <header>
-        <a class="logo" href="#">ACME</a>
+        <a class="logo" href="#jeder">ACME</a>
         <nav>
             <ul class="lista">
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Clientes</a></li>
-            </ul> 
+                <li><a href="#nos">Nosotros</a></li>
+                <li><a href="#prod">Productos</a></li>
+                <li><a href="#cli">Clientes</a></li>
+                <li><a class="btn" href="#cont">Contacto</a></li>
+            </ul>             
         </nav>
-        <a href=""></a><button>Contacto</button></a>
+        <div class="burger">
+            <div class="linea1"></div>
+            <div class="linea2"></div>
+            <div class="linea3"></div>
+        </div>
     </header>
     
-    <div class="contenedor-portada">
+    <div class="contenedor-portada"  id="jeder">
         <div class="imagen-portada">
             <!-- Portada con la imágen -->
         </div>
@@ -49,14 +54,18 @@
         
         <div class="separador"></div>
 
-        <section class="nosotros">
+        <section class="nosotros" id="nos">
             <h2>Acerca de nosotros</h2>
-            <p>Desde su fundación en 1916, <span class="acme">ACME</span> se ha presentado como la marca insignia de productos que destacan por su calidad y desafían las leyes de la física. Por más de 100 años hemos estado a la vanguardia de la tecnología manufacturando productos que nuestra competencia ni llegó a imaginar.</p>         
+            <p>Desde su fundación en 1916, <span class="acme">ACME</span> se ha presentado como la marca insignia de productos que destacan por su calidad y desafían las leyes de la física. Por más de 100 años hemos estado a la vanguardia de la tecnología manufacturando productos que nuestra competencia ni llegó a imaginar.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus numquam totam at ipsam, dolore dolores voluptatibus voluptatum voluptate nisi delectus accusantium similique quisquam esse est. Modi quo, sapiente praesentium sunt esse ratione harum omnis earum mollitia officiis consequatur molestias necessitatibus nostrum? Illum libero exercitationem beatae doloribus qui cum, ducimus, doloremque ex aut distinctio ratione fuga esse. Ratione aperiam ad quas.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam similique suscipit rem tempora, consectetur illum numquam in placeat optio error sequi, pariatur enim amet ducimus est alias eligendi minima nisi molestiae, eos nam officiis maiores. Eius non impedit quia aperiam repudiandae a ab provident ducimus omnis natus! Veritatis, quo impedit!</p>         
         </section>  
         
         <div class="separador"></div>
        
-        <section class="productos">
+        <section class="productos" id="prod">
             <h2>Nuestros productos más reconocidos</h2>
             <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
                 <div class="carousel-cell">
@@ -84,27 +93,36 @@
             </div>
         </section>
 
-        <div class="separador"></div>
+        <div class="separador" id="cli"></div>
         
         <section class="clientes">
             <h2>Siempre en los recuerdos de nuestros clientes</h2>
             <div class="contenedor-tarjetas">
                 <div class="tarjeta">
                     <img src="img/opinion1.png" class="img-cliente" alt="Foto de cliente">
-                    <h3>Coyote</h3>
-                    <p>Los contrato desde que tengo memoria. No sé por qué sigo confiando en esta marca pedorra.</p>
+                    <div class="texto-cliente">
+                        <h3>Coyote</h3>
+                        <br>
+                        <p>Los contrato desde que tengo memoria. No sé por qué sigo confiando en esta marca pedorra.</p>
+                    </div>
                 </div>
 
                 <div class="tarjeta">
                     <img src="img/opinion2.png" class="img-cliente" alt="Foto de cliente">
-                    <h3>Correcaminos</h3>
-                    <p>Nunca me han defraudado. Jamás. Siempre funcionan como es de esperarse.</p>
+                    <div class="texto-cliente">
+                        <h3>Correcaminos</h3>
+                        <br>
+                        <p>Nunca me han defraudado. Jamás. Siempre funcionan como es de esperarse.</p>
+                    </div>
                 </div>
 
                 <div class="tarjeta">
                     <img src="img/opinion3.png" class="img-cliente" alt="Foto de cliente">
-                    <h3>Pikachu</h3>
-                    <p>No se qué hago acá pero exijo pokebolas marca <span class="acme">ACME</span>. Asi podríamos escapar más seguido...</p>
+                    <div class="texto-cliente">
+                        <h3>Pikachu</h3>
+                        <br>
+                        <p>No se qué hago acá pero exijo pokebolas marca <span class="acme">ACME</span>. Asi podríamos escapar más seguido...</p>
+                    </div>
                 </div>
             </div>
             <h3>Gracias por su confianza!</h3>
@@ -112,7 +130,7 @@
 
         <div class="separador"></div>
 
-        <section class="contacto">
+        <section class="contacto" id="cont">
             <h2>Contáctese con nosotros</h2>
             <form action="#" method="POST">
                 <input type="text" placeholder="Nombre" required>
@@ -123,7 +141,8 @@
                 <br>
                 <textarea name="contato-texto" cols="20" rows="10" placeholder="Ingrese su mensaje aquí" required></textarea>
                 <br>
-                <input class="btn" type="button" value="Enviar">
+                <!-- <input class="btn" type="button" value="Enviar"> -->
+                <button class="btn" type="submit">Enviar</button>
             </form>
         </section>
     </main>

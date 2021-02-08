@@ -1,15 +1,17 @@
-/********* GLOBALES *********/
-    @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); /*Font ACME*/
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500&display=swap'); /*Font Titulares*/
+/********* FUENTES *********/
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); /*Font ACME*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,500&display=swap'); /*Font Titulares*/
 
+/********* GLOBALES *********/
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         background-color: #fafafa;
+        scroll-behavior: smooth;
     }
 
-    li, a, button, .btn {
+    li, a, .btn {
         font-family: Verdana, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 1rem;
@@ -49,9 +51,9 @@
     }
 
     header {
-        position: sticky;
-        z-index: 9;
-        top: 0px;
+        position: sticky;   /*Estas 3 propiedades*/
+        z-index: 9;         /*van siempre juntos*/
+        top: 0px;           /*para lograr efecto*/
         background-color: #fafafa;
         display: flex;
         justify-content: flex-end;
@@ -79,11 +81,9 @@
             color: #ad2323;
         }
 
-    header button, .btn {
+    .btn {
         padding: 9px 25px;
         background-color: #ffe5bd;
-        color: #7e1a1a;
-        margin-left: 20px;
         border: solid 2px #ffe5bd;
         cursor: pointer;
         outline: none;
@@ -98,16 +98,32 @@
             -ms-transition: all 0.3sec ease 0s;
             -o-transition: all 0.3sec ease 0s;
     }
-        header button:hover, 
-        .contacto .btn:hover {
+        .btn:hover {
             background-color: #7e1a1a;
             color: #fafafa;
             border: solid 2px #7e1a1a;
         }
-        header button:active, 
-        .contacto .btn:active {
+        .btn:active {
             background-color: #ad2323;
         }
+
+    /*Menu hamburguesa - SOLO MOVIL*/
+    .burger div {
+        height: 3px;
+        width: 25px;
+        background-color: mediumvioletred;
+        margin: 5px;
+        transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+    }
+
+    .burger {
+        cursor: pointer;
+        display: none;
+    }
 
 /********* PORTADA *********/
 
@@ -121,17 +137,13 @@
         position: relative;
         /* height: 500px; */
         height: 55vh;
-        /* overflow: hidden; */ /*No se que hace*/
+        overflow: hidden; /*No se que hace*//*///////////////////////////////////////////////////////////////////////////////////////*/
         background-image: url(img/portada.jpg);
         background-size: cover;
         background-position: center;
     }
 
 /********* MAIN BODY *********/
-
-    /* h1 {
-        padding: 40px 0px 0px;
-    } */
 
 /* Sobre nosotros */
 
@@ -165,30 +177,31 @@
 /* Clientes */
 
     .tarjeta, 
-    .tarjeta > *,
-    .tarjeta span{
+    .tarjeta > * ,
+    .tarjeta span {
         background-color: white;
     }
 
     .clientes img {
         zoom: 20%;
-        /* border: solid 1px #f0f0f0; */
         border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
         box-shadow: 2px 2px 6px 1px #9595957e;
     }
 
     .tarjeta h3 {
         font-weight: bold;
         padding: 15px 0;
+        background-color: white;
     }
 
     .clientes p {
         font-style: italic;
         padding: 0 10%;
+        background-color: white;
     }
 
     .contenedor-tarjetas {
@@ -206,9 +219,11 @@
             -ms-border-radius: 3%;
             -o-border-radius: 3%;
         box-shadow: 2px 2px 6px 1px #9595957e;
-}
+    }
 
-/* Clientes */
+    
+
+/* Contacto */
 
     .contacto input, 
     .contacto textarea {
@@ -228,7 +243,7 @@
        padding: 9px 10%;
    }
     
-/* Clientes */
+/* Footer */
 
     footer {
         padding-top: 50px;
@@ -265,7 +280,7 @@
 
     footer p {
         padding-top: 20px;
-        padding-bottom: 5px;
+        padding-bottom: 18px;
         font-size: .8rem;
     }
     
@@ -275,16 +290,157 @@
         padding: 0;
     }
 
+/* Media queries y toggles mobile*/
 
+@media screen and (max-width: 1170px)  {
+    .contenedor-tarjetas {
+        display: block;
+    }
+    
+    .tarjeta {
+        display: flex;
+    }
+    
+    .tarjeta img {
+        z-index: 8;
+    }
+    
+    .tarjeta h3,
+    .tarjeta p {
+        background-color: white;
+    }
 
+    .tarjeta h3 {
+        margin: 0;
+        padding-bottom: 0;
+    }
+}
 
+@media screen and (max-width: 1130px) {
+    .contenedor-portada {
+        padding: 0 5%;
+        border-bottom: solid 1px rgb(42, 42, 42);
+    }
 
+    .imagen-portada {
+        zoom: 80%;
+    }
+}
 
+@media screen and (max-width: 1130px) {
+    .imagen-portada {
+        zoom: 50%;
+    }
+}
 
+@media screen and (max-width: 900px)  {       
+    main {
+        padding: 0 5%;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
 
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tienda a h3 {
+        padding-top: 0;
+    }
 
+    .lista {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        padding-top: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        /*box-shadow: -5px 1px 0px 1px rgba(61, 61, 61, 0.493);*/
+        transform: translateX(100%); /*Ocultalabarra*/
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+            -webkit-transition: transform 0.3s ease-in;
+            -moz-transition: transform 0.3s ease-in;
+            -ms-transition: transform 0.3s ease-in;
+            -o-transition: transform 0.3s ease-in;
+    }
+    
+    .lista li {
+        margin: 90px 0;
+        opacity: 0;
+    }
 
+    .burger {
+        display: block;
+    }
+}
 
+@media screen and (max-width: 590px)  {  
+    .contenedor-tarjetas {
+        display: block;
+    }
 
+    .tarjeta {
+        display: block;
+        margin: 30px 20px;
+        border-radius: 3%;
+            -webkit-border-radius: 3%;
+            -moz-border-radius: 3%;
+            -ms-border-radius: 3%;
+            -o-border-radius: 3%;
+        box-shadow: 2px 2px 6px 1px #9595957e;
+    }
+}
 
-/************************************************************************************************************************************/
+.nav-activada {
+    transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+}
+
+@keyframes navCelFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+            -webkit-transform: translateX(50px);
+            -moz-transform: translateX(50px);
+            -ms-transform: translateX(50px);
+            -o-transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+            -ms-transform: translateX(0px);
+            -o-transform: translateX(0px);
+    }
+}
+
+.toggle .linea1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+      -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+      -moz-transform: rotate(-45deg) translate(-5px, 6px);
+      -ms-transform: rotate(-45deg) translate(-5px, 6px);
+      -o-transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .linea2 {
+    opacity: 0;
+}
+.toggle .linea3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+      -webkit-transform: rotate(45deg) translate(-5px, -6px);
+      -moz-transform: rotate(45deg) translate(-5px, -6px);
+      -ms-transform: rotate(45deg) translate(-5px, -6px);
+      -o-transform: rotate(45deg) translate(-5px, -6px);
+}
+
